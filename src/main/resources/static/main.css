@@ -1,0 +1,33 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:white;
+    color:black;
+    line-height:1.6;
+}
+
+h1{
+    background-color:darkseagreen;
+    color:black;
+    text-align:center;
+    padding:35px;
+    margin:0;
+    font-size:36px;
+}
+
+nav{
+    background-color:lightblue;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:015px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:goldenrod;
+}
