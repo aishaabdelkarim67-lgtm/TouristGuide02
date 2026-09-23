@@ -1,4 +1,4 @@
-package touristguide02.repository;
+package com.example.touristguide02.repository;
 
 import com.example.touristguide02.model.TouristAttraction;
 import org.springframework.stereotype.Repository;

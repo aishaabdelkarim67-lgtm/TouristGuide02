@@ -1,4 +1,4 @@
-package touristguide02.TouristService;
+package com.example.touristguide02.Service;
 
 import com.example.touristguide02.model.TouristAttraction;
 import com.example.touristguide02.repository.TouristRepository;
