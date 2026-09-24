@@ -101,6 +101,23 @@ public class TouristRepository {
                         attraction.getName().equalsIgnoreCase(name)
         );
     }
+
+    public List<String>getCities(){
+
+        return List.of(
+                "Torv",
+                "Byliv",
+                "Natur",
+                "Gratis",
+                "Bibliotek",
+                "Børnevenlig",
+                "Kirke",
+                "Religion",
+                "Udendørs",
+                "Arrangement"
+
+        );
+    }
 }
 
 

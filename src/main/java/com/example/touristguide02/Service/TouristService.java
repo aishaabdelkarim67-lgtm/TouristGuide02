@@ -5,6 +5,7 @@ import com.example.touristguide02.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
     @Service
@@ -34,6 +35,10 @@ import java.util.ArrayList;
         }
         public void deleteAttraction(String name){
             touristRepository.deleteAttraction(name);
+        }
+
+        public List<String> getCities(){
+            return touristRepository.getCities();
         }
 
 
