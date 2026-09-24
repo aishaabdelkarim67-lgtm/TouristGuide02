@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da"> xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rediger attraktion</title>
+
+    <link th:herf="@{/main.css}" rel="stylesheet">
+
+</head>
+<body>
+
+<h1> Rediger attraktion</h1>
+
+<button th:action="@{attractions/update}"> th:object= "${attraction} method="post">
+
+    <input type=" hidden" th:field="*{name}">
+
+    <label>Navn:</label>
+    <p th:text="*{name}"></p>
+
+    <label for="description"> Beskrivelse:</label><br>
+    <textarea id="description" th field ="*{description}"></textarea><br>
+
+    <label for="city">By:</label><br>
+    <input type =" text" id="city" th field ="*{city}"><br>
+
+    <label for = "tags"> Tags (adskil med komma):</label><br>
+    <input type = "text" id="tags" name="tags"
+           th value=" ${strings.listjoin(attraction.tags, ' , ' )}"> <br>
+
+    < button type=" submit"> Gem ændringer</button>
+
+</form>
+
+<a href=" /attractions"> Tilbage til listen </a>
+
+
+</body>
+</html>
