@@ -1,31 +1,67 @@
 <!DOCTYPE html>
-<html lang="da" xmlns:th="http://www.thymeleaf.org">
+<html lang="da" xmlns:th="http//www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Tags</title>
-
-    <link th:herf="@{/main.css}" rel="stylesheet">
-
+    <title>Alle attraktioner</title>
+  <link th:href="@{/main.css}" rel="stylesheet">
 </head>
+
 <body>
 
-<h1 th:text="${attraction.name}"></h1>
+<h1>Alle turistattraktioner</h1>
+<table>
+  <tr>
 
-<h2>Tags</h2>
+    <th>Navn</th>
+    <th>Beskrivelse</th>
+    <th>By</th>
+    <th>Tags</th>
 
-<ul>
-    </li th:each="tag : ${attraction.tags}"
-    th:text=${tag}>
-    </li>
+  </tr>
 
-</ul>
+  <tr th:each="attraction : ${attractions}">
+
+    <td th:text="${attraction.name}"></td>
+
+    <td th:text="${attraction.description}"></td>
+
+    <td th:text="${attraction.city}"></td>
+
+
+
+    <td>
+
+      <a th:href="@{/attractions/{name}/tags(name=${attraction.name})}">
+      Tags
+      </a>
+
+    </td>
+
+  <td>
+    <a th:href="@{/attractions/{name}/edit(name=${attraction.name})}">
+      Opdater
+    </a>
+
+    </td>
+    <td>
+      <a th:href="@{/attractions/{name}/delete(name=${attraction.name})}">
+        Slet
+      </a>
+    </td>
+
+</tr>
+
+  </table>
+
+<br>
+<a  th:href="@{/attractions/add}">
+  Tilføj attraktion
 
 </a>
-
-</a>
-
-
-
 
 </body>
+
 </html>
+
+
+

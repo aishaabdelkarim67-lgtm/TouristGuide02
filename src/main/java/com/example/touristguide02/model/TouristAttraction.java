@@ -10,6 +10,10 @@ public class TouristAttraction {
         private List<String> tags;
         private String city;
 
+        public TouristAttraction(){
+
+        }
+
         public TouristAttraction (String name, String description, List<String>tags, String city) {
             this.name = name;
             this.description = description;
@@ -33,6 +37,8 @@ public class TouristAttraction {
         public String getCity(){
             return city;
         }
+
+        public void setCity(String city) {this.city=city;}
 
         public void setName(String name) {
             this.name = name;

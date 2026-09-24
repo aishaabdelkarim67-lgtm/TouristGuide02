@@ -34,7 +34,7 @@ public class TouristRepository {
 
         attractions.add(new TouristAttraction(
                 "Brønshøj Bibliotek",
-                "Et bibliotek i Brønshøj",
+                "Et bibliotek",
                 List.of (" bibliotek", " Børnevenlig"),
                 " Brønshøj"
 
@@ -42,14 +42,14 @@ public class TouristRepository {
 
         attractions.add(new TouristAttraction(
                 "Brønshøj Kirke" ,
-                "Et historisk kirke ved Brønshøj Torv",
+                "En kirke i Brønshøj",
                 List.of (" kirke", " religion"),
                 " Brønshøj"
 
         ));
 
         attractions.add(new TouristAttraction(
-                "Bellahøj Friluftsscene",
+                "Friluftsscene",
                 "Et udendørs scene",
                 List.of (" udendørs", " arrangement"),
                 " Brønshøj"
@@ -87,9 +87,12 @@ public class TouristRepository {
             if (attraction.getName()
                     .equalsIgnoreCase(updatedAttraction.getName())) {
 
-                attraction.setDescription(
-                        updatedAttraction.getDescription()
-                );
+                attraction.setDescription(updatedAttraction.getDescription());
+                        attraction.setCity(updatedAttraction.getCity());
+                        attraction.setTags(updatedAttraction.getTags());
+
+
+
             }
         }
     }
@@ -103,6 +106,10 @@ public class TouristRepository {
     }
 
     public List<String>getCities(){
+        return List.of("Brønshøj");
+    }
+
+    public List<String>getTags(){
 
         return List.of(
                 "Torv",

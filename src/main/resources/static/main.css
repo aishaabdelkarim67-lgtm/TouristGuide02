@@ -98,3 +98,14 @@ footer p{
     margin:5px;
 }
 
+table{
+    border-spacing:0 10px;
+    margin:20px auto;
+    width: 80%;
+
+}
+th,td{
+    padding:8px 15px;
+    text-align: left;
+}
+
