@@ -5,6 +5,7 @@ import com.example.touristguide02.Service.TouristService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -66,5 +67,21 @@ public class TouristController {
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/{name}/edit")
+
+    public String editattractionForm(@PathVariable  String name, Model model){
+        TouristAttraction attarction= touristService.getAttractionByName(name);
+        return "editAttraction";
+    }
+
+    @PostMapping("/update")
+
+    public String updateAttractionform(@ModelAttribute TouristAttraction attraction){
+        touristService.updateAttraction(attraction);
+        return "redirect:/attractions";
+    }
+
+
 
 }
